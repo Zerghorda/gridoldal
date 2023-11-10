@@ -1,0 +1,121 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+body {
+  height: 100%;
+  background-image: url(kepek/images.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+header,
+nav,
+aside,
+article,
+footer {
+  border: 1px solid white;
+  padding: 10px;
+}
+main {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-areas:
+    "h h h"
+    "n n n"
+    "b a j"
+    "f f f";
+}
+header {
+  grid-area: h;
+  color: cornflowerblue;
+}
+nav {
+  padding: 20px;
+  grid-area: n;
+}
+#manu {
+  padding: 10px;
+  background-color: darkcyan;
+  width: 80%;
+}
+a:link {
+  padding: 40px;
+  color: yellow;
+  text-decoration: none;
+}
+a:visited {
+  color: yellow;
+  text-decoration: none;
+}
+aside#bal {
+  color: lavender;
+  grid-area: b;
+}
+article {
+  grid-area: a;
+}
+#gallery {
+  padding: 5px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+#gallery ul {
+  list-style: none;
+  margin: 15px;
+}
+#gallery ul li {
+  margin: 10px;
+}
+.kepsor {
+  border: 1px solid white;
+}
+.kep {
+  width: 110%;
+  height: 110%;
+}
+aside#jobb {
+  color: lavender;
+  grid-area: j;
+}
+aside#jobb h2 {
+  margin-bottom: 5px;
+}
+footer {
+  grid-area: f;
+}
+@media screen and(max-width:600px) {
+    body {
+        width: 100%;
+        font-size: 3vw;
+      }
+    main{
+        grid-template-columns: 2fr 1fr;
+        grid-template-areas:
+          "h h"
+          "n n"
+          "a a"
+          "j j"
+          "b b"
+          "f f";
+    }
+}
+@media screen and (max-width: 450px) {
+    body {
+      width: 100%;
+      font-size: 5vw;
+    }
+    main {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "h"
+        "n"
+        "b"
+        "a"
+        "j"
+        "f";
+    }
+  }
